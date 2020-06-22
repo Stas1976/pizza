@@ -1,0 +1,31 @@
+.address {
+  background-color: $color-grey-light-2;
+  height: 100vh;
+  padding: 5rem 2rem;
+
+  &__header {
+    color: $color-secondary-dark;
+  }
+
+  &__form {
+    margin: auto;
+    max-width: 40rem;
+  }
+
+  &__inputs {
+    margin: 1rem 0 2rem 0;
+  }
+
+  &__comment {
+    float: left;
+    background-color: rgba($color-white, .5);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

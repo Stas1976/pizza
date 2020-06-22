@@ -1,0 +1,42 @@
+.btn-block {
+  width: 100%;
+  margin-top: 2rem;
+
+
+
+  &__btn {
+    width: 33.333333%;
+    background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+    height: 5rem;
+    float: left;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-white;
+
+    &--select {
+      background-color: $color-white;
+      border: 1px solid $color-secondary-dark;
+      background-image: none;
+      color: $color-secondary-dark
+    }
+
+
+    &:hover,
+    &:active {
+      background-color: $color-white;
+      border: 1px solid $color-secondary-dark;
+      background-image: none;
+      color: $color-secondary-dark
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:focus {
+      border: none;
+    }
+  }
+}

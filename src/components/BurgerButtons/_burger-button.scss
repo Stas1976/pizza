@@ -1,0 +1,84 @@
+.burger-button {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__label {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    text-align: center;
+    cursor: pointer;
+    z-index: 50;
+    transition: top 0.3s;
+
+
+    &--hiden {
+      top: -7rem;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-secondary-dark;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
+    }
+  }
+
+  &__label:hover &__icon::before {
+    top: -1rem
+  }
+
+  &__label:hover &__icon::after {
+    top: 1rem
+  }
+
+  &__checkbox:checked+&__label &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked+&__label &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked+&__label &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+@media (min-width: 600px) {
+  .burger-button {
+    display: none;
+  }
+}

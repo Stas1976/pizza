@@ -1,0 +1,50 @@
+.confirmation {
+  background-color: $color-grey-light-2;
+  height: 100vh;
+  padding: 5rem 2rem;
+
+  &__header {
+    color: $color-secondary-dark;
+  }
+
+  &__form {
+    margin: auto;
+    max-width: 40rem;
+  }
+
+  &__inputs {
+    margin: 1rem 0 2rem 0;
+  }
+
+  &__links {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 25rem;
+    margin: 5rem auto;
+
+    &--link {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $color-secondary-dark;
+    }
+  }
+
+  &__comment {
+    float: left;
+    background-color: rgba($color-white, 0.5);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media (min-width: 60px) {
+  .confirmation {
+    padding: 9rem 2rem;
+  }
+}

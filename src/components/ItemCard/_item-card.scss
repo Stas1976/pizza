@@ -1,0 +1,106 @@
+.item-card {
+  position: relative;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 10rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include respond(phone) {
+    margin-top: 4rem;
+  }
+
+  &__header {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .3rem;
+
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+
+  }
+
+  &__item {
+    position: relative;
+    box-shadow: .5rem .5rem 1rem $color-grey-dark-2;
+    letter-spacing: 0.1rem;
+    height: 45rem;
+    width: 33rem;
+    margin: 1rem;
+    padding: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column;
+
+  }
+
+  &__info {
+    position: absolute;
+    left: 1rem;
+    top: 4rem;
+    cursor: pointer;
+    color: $color-secondary-dark;
+    height: 4rem;
+    width: 4rem;
+
+    &--show {
+      position: absolute;
+      top: 6rem;
+      left: -0.5rem;
+      height: 20rem;
+      width: 20rem;
+      background-color: $color-grey-dark-3;
+      border-radius: 1rem;
+    }
+
+    &--show-enter {
+      opacity: 0;
+    }
+
+    &--show-enter-active {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+
+    &--show-exit {
+      opacity: 1;
+    }
+
+    &--show-exit-active {
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+  }
+
+
+  &__image {
+    height: 16rem;
+    width: 16rem;
+    margin: 2rem auto;
+  }
+
+  &__ingredients {
+    display: flex;
+    text-align: left;
+    height: 12rem;
+    overflow: auto;
+    font-weight: 400;
+  }
+
+  &__price-block {
+    position: relative;
+  }
+}

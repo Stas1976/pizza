@@ -1,0 +1,27 @@
+.items-quntity-round {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  border: 1px solid $color-secondary-dark;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color: $color-secondary-dark;
+  color: $color-white;
+  font-weight: 400;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .items-quntity-round {
+    display: none;
+  }
+}
